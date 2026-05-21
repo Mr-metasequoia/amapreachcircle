@@ -31,18 +31,18 @@
         </div>
         <div class="input-item" style='margin-bottom:2rem;'>
             <label>时长(分钟)</label>
-            <input type="hidden" id="t" class="single-slider" value="35" />
+            <input type="hidden" id="t" class="single-slider" value="15" />
         </div>
         <div class="input-item">
             <div class="input-item-prepend">
                 <label class="input-item-text">出行方式</label>
             </div>
             <select iname="v" id="v">
-                <option selected value="SUBWAY,BUS">地铁+公交(高德)</option>
+                <option value="SUBWAY,BUS">地铁+公交(高德)</option>
                 <option value="SUBWAY">地铁(高德)</option>
                 <option value="BUS">公交(高德)</option>
                 <option value="walking">步行(Mapbox)</option>
-                <option value="cycling">骑行(Mapbox)</option>
+                <option selected value="cycling">骑行(Mapbox)</option>
                 <option value="driving">驾车(Mapbox)</option>
             </select>
             <input id="search" type="button" class="btn" value="查询" />
@@ -194,10 +194,10 @@
             $('.single-slider')
                 .jRange({
                     onstatechange: getArriveRange,
-                    from: 1,
-                    to: 60,
+                    from: 5,
+                    to: 75,
                     step: 1,
-                    scale: [5, 15, 25, 35, 60],
+                    scale: [5, 19, 33, 47, 61, 75],
                     format: '%s',
                     width: 400,
                     showLabels: true,
